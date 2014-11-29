@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "Florent (Noxionx) Gadé's CV",
-  "repository": "",
+  "repository": "https://github.com/Noxionx/NoxWebCV",
   "license": "free",
   "devDependencies": {
     "karma": "~0.10",
