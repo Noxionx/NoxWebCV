@@ -1,16 +1,16 @@
-<md-toolbar class="md-blue-theme">
-        <h1 class="md-toolbar-tools">Sidenav</h1>
+<md-toolbar md-theme-watch="true" >
+    <h1 class="md-toolbar-tools" flex="" layout="column" data-i18n="Florent Gadé" ng-click="goHome()" style="cursor: pointer">
+    </h1>
       </md-toolbar>
       <md-content flex>
-          <div>
-            <md-button class="md-menu-item" style="width:100%;text-align: left;padding: 16px;" >
-              Demos
+          <div layout="column">
+            <md-button id="studies" href="#/studies" class="menu-item menu-title md-menu-item" data-i18n="Studies">
             </md-button>
-              <md-button class="md-menu-item" style="width:100%;text-align: left;padding: 16px;" >
-              Demos
+              <md-button id="works" href="#/works" class="menu-item menu-title md-menu-item" data-i18n="Works">
             </md-button>
-              <md-button class="md-menu-item" style="width:100%;text-align: left;padding: 16px;" >
-              Demos
+              <md-button id="skills" href="#/skills" class="menu-item menu-title md-menu-item" data-i18n="Skills">
+            </md-button>
+            <md-button id="misc" href="#/misc" class="menu-item menu-title md-menu-item" data-i18n="Miscellaneous">
             </md-button>
           </div>
 </md-content>

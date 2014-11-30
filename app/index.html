@@ -12,12 +12,18 @@
      </style>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="bower_components/angular-material/themes/blue-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/green-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/orange-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/red-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/grey-theme.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
     
     <!-- Google Icons -->
     <link rel="stylesheet" href="bower_components/material-design-icons/sprites/css-sprite/sprite-action-white.css">
+    
+    <link rel="stylesheet" href="css/app.css">
 </head>
-<body layout="row" md-theme="blue">
+<body ng-controller="appCtrl" layout="row" md-theme="{{theme}}">
     <!-- Side menu -->
     <md-sidenav  ng-controller="sidenavCtrl" 
                             data-ng-include=" 'partials/sidenav.html' "
@@ -25,17 +31,18 @@
                             class="md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open" 
                             md-component-id="left" 
                             md-is-locked-open="$media('md')" 
-                            tabindex="-1" >
+                            tabindex="-1" 
+                            md-theme-watch="true">
     </md-sidenav>
 <div layout="column" layout-fill tabindex="-1" role="main">
     <!-- Top bar -->
-    <md-toolbar ng-controller="headerCtrl" data-ng-include=" 'partials/header.html' "></md-toolbar>
+    <md-toolbar ng-controller="headerCtrl" data-ng-include=" 'partials/header.html' " md-theme-watch="true"></md-toolbar>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-<md-content ng-view md-scroll-y="" flex="" class="md-padding ng-scope md-blue-theme"><div class="doc-content ng-scope"></div>
+<md-content ng-view md-scroll-y="" flex="" md-theme-watch="true"><div class="doc-content ng-scope"></div>
   </md-content>
 </div>
 

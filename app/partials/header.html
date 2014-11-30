@@ -1,6 +1,19 @@
 
 <div class="md-toolbar-tools" flex layout="column">
+    {{currentPage}}
     <div flex></div>
+    <span class="dropdown langs text-normal" data-ng-controller="LangCtrl" style="margin-right:50px;">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    {{lang}}
+                   
+                </a>
+                <ul class="dropdown-menu with-arrow pull-right list-langs" role="menu">
+                    <li data-ng-show="lang !== 'en' ">
+                        <a href="javascript:;" data-ng-click="setLang('en')"><div class="flag flags-english"></div> English</a></li>
+                    <li data-ng-show="lang !== 'fr' ">
+                        <a href="javascript:;" data-ng-click="setLang('fr')"><div class="flag flags-france"></div> Francais</a></li>
+                </ul>
+            </span>
         <section layout="row" layout-align="right">
             <md-button ng-click="showInfos($event)" class="md-fab" >
                     <md-icon icon="img/svg/flags/france.svg"></md-icon>
